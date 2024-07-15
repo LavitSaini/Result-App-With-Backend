@@ -1,0 +1,52 @@
+<script>
+    const form = document.getElementById('form');
+    const studentsResultRoot = document.querySelector('.student-result');
+
+    const rollNumberInput = document.getElementById('rollNo');
+    const submitBtn = document.getElementById('submitBtn');
+    const rollNumberErrorMessage = rollNumberInput.nextElementSibling;
+
+    // function to display the loader
+    function displayLoader() {
+        let clutter = `<!-- Loader -->
+      <div class="loader">
+        <div class="spinner"></div>
+      </div>`;
+        studentsResultRoot.innerHTML = clutter;
+    }
+
+
+    // function to handle the form input
+    function validateRollNumberInput(e) {
+
+        let rollNumber = rollNumberInput.value;
+
+        // Checking Roll Number Input validation
+
+        if (rollNumber.trim() === "") {
+            // Roll Number field cannot be empty
+            rollNumberErrorMessage.textContent = "Roll Number field cannot be empty!";
+            submitBtn.disabled = true;
+            return;
+        } else if (isNaN(rollNumber)) {
+            // Roll Number can only contains numbers
+            rollNumberErrorMessage.textContent = "Please enter correct Roll Number!";
+            submitBtn.disabled = true;
+            return;
+        } else if(rollNumber.trim().length < 7){
+            // Roll Number cannot less than 7 digits
+            rollNumberErrorMessage.textContent = "Roll Number cannot less than 7 digits!";
+            submitBtn.disabled = true;
+            return;
+        }
+
+        rollNumberErrorMessage.textContent = '';
+        submitBtn.disabled = false;
+
+    }
+
+    rollNumberInput.addEventListener('input', validateRollNumberInput);
+    form.addEventListener('submit', () => {
+        displayLoader();
+    });
+</script>

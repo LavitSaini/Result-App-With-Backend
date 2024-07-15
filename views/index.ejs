@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+        <title>form</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="heading">
+            <h1>CGC BCA Batch(2022 - 2025) <span>Result App</span></h1>
+            <img src="images/icon.png" alt="">
+        </div>
+        <div class="wrapper">
+            <div class="app-form">
+                <form action="/result" method="post" id="form">
+                    <input type="number" name="rollNo" placeholder="Enter Your Roll Number" id="rollNo" required>
+                    <small class="error-message"></small>
+                    <fieldset>
+                        <label for="sem">Semester:</label>
+                        <select name="semester" id="sem">
+                            <option value="first">First</option>
+                            <option value="second">Second</option>
+                            <option value="third">Third</option>
+                            <option value="fourth" disabled>Fourth</option>
+                            <option value="fifth" disabled>Fifth</option>
+                            <option value="sixth" disabled>Sixth</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </form>
+            </div>
+            <div class="student-result">
+                  <h2 class="search-result">Search Result!</h2>
+            </div>
+        </div>
+    </main>
+</body>
+<%- include('./partials/script.ejs') %>
+
+</html>

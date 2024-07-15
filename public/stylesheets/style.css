@@ -1,0 +1,392 @@
+/* Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* Css Reset */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th,
+td {
+  border: 2px solid black;
+  padding: 0.75rem;
+  line-height: 1.2;
+}
+
+/* Container */
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main Section */
+
+.main {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Heading Section */
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #292f90;
+}
+
+h1 span{
+  color: #cc1717;
+}
+
+.heading a{
+  align-self: start;
+}
+
+.btn{
+  position: fixed;
+  bottom: 2rem;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid transparent;
+  background-color: #292f90;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3ms ease;
+  left: 2rem;
+}
+
+.btn:hover{
+  background-color: transparent;
+  color: #292f90;
+  border-color: #292f90;
+}
+
+.heading img{
+  width: 8rem;
+}
+
+/* Wrapper Section */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 3rem;
+}
+
+/* Form Section */
+.app-form {
+  width: 230px;
+}
+
+.app-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input {
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+form input::placeholder {
+  color: #000000;
+}
+
+form fieldset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+fieldset select {
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+form button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* form Error  */
+
+.error-message {
+  font-size: 0.9rem;
+  color: #c00a0a;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Student Data Section */
+
+.student-result {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.student-result .student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.student-info li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.student-info li:last-child{
+  text-transform: capitalize;
+}
+
+/* Student Result Table */
+
+.result-table {
+  max-width: 600px;
+}
+
+/* Grade Marks Table */
+
+.grade-marks {
+  max-width: 300px;
+}
+
+/* No Result found */
+
+.no-result-found {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #cc1717;
+  text-transform: capitalize;
+}
+
+/* Search Result */
+
+.search-result{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #292f90;
+  text-transform: capitalize;
+}
+
+.grade-table td,
+.grade-table th {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Loader */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.35rem solid #d62329;
+  border-radius: 50%;
+  border-top-color: #292f90;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 828px) {
+
+  .heading{
+    align-items: start;
+  }
+
+  .heading h1{
+    text-align: start;
+  }
+
+  .btn{
+    position: static;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  html {
+    font-size: 11px;
+  }
+}
