@@ -16,9 +16,11 @@ const resultSchema = new mongoose.Schema({
 const firstSemesterResult = mongoose.model('firstSemesterResult', resultSchema);
 const secondSemesterResult = mongoose.model('secondSemesterResult', resultSchema);
 const thirdSemesterResult = mongoose.model('thirdSemesterResult', resultSchema);
+const fourthSemesterResult = mongoose.model('fourthSemesterResult', resultSchema);
 
 module.exports = {
     firstSemesterResult,
     secondSemesterResult,
-    thirdSemesterResult
+    thirdSemesterResult,
+    fourthSemesterResult
 }

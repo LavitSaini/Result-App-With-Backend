@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { firstSemesterResult, secondSemesterResult, thirdSemesterResult } = require("../models/Result");
+const { firstSemesterResult, secondSemesterResult, thirdSemesterResult, fourthSemesterResult } = require("../models/Result");
 
 router.get('/', (req, res, next) => {
     res.render('index');
@@ -37,6 +37,9 @@ async function getStudentResult(rollNo, semester) {
         return result;
     } else if (semester === 'third') {
         let result = await thirdSemesterResult.findOne({ rollNo });
+        return result;
+    } else if (semester === 'fourth'){
+        let result = await fourthSemesterResult.findOne({ rollNo });
         return result;
     }
 }
